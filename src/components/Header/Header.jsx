@@ -2,8 +2,8 @@ import { StyledHeader } from './Header.styled';
 
 export const Header = () => {
   return (
-    <div>
-      <h1>Hello nahuy</h1>
-    </div>
+    <StyledHeader>
+      <a className='logo' href='/movie_app/popular'>Movie app</a>
+    </StyledHeader>
   );
 };

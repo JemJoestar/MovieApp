@@ -1,7 +1,6 @@
 import { StyledTitle } from 'components/Components.styled';
 import { StyledMovieList } from './MovieList.styled';
 import { getMoviePoster } from 'api/getApi';
-import { useParams } from 'react-router-dom';
 
 export const MovieList = ({movieList, title, setMediaType}) => {
   console.log(`movieList:`, movieList );

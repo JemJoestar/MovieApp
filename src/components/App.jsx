@@ -23,9 +23,11 @@ export const App = () => {
         setMovieList(data);
         return;
       }
-      setMovieList({
-        ...movieList,
-        results: [...movieList.results, ...data.results],
+      setMovieList(prevState => {
+        return {
+          ...prevState,
+          results: [...prevState.results, ...data.results],
+        };
       });
     }
 
@@ -37,7 +39,7 @@ export const App = () => {
       <Header />
       <Routes>
         <Route
-          path="/popular/"
+          path="/"
           element={
             <MovieList setMediaType={setMediaType} movieList={movieList} />
           }
